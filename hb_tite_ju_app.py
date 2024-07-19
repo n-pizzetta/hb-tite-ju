@@ -125,26 +125,6 @@ glowing_text_css = """
         text-align: center;
         animation: glowing 1500ms infinite;
     }
-
-    @keyframes glowingViolet {
-        0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #8a2be2, 0 0 20px #8a2be2, 0 0 25px #8a2be2, 0 0 30px #8a2be2, 0 0 35px #8a2be2; }
-        50% { text-shadow: 0 0 5px #fff, 0 0 10px #da70d6, 0 0 15px #da70d6, 0 0 20px #da70d6, 0 0 25px #da70d6, 0 0 30px #da70d6, 0 0 35px #da70d6; }
-        100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #8a2be2, 0 0 20px #8a2be2, 0 0 25px #8a2be2, 0 0 30px #8a2be2, 0 0 35px #8a2be2; }
-    }
-    glowing-text-violet {
-        font-size: 2.2em;
-        color: #000;
-        font-weight: bold; /* Gras pour mieux voir le contour */
-        text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000; /* Contour noir autour du texte */
-        align-items: center;
-        text-align: center;
-        animation: glowing2 1500ms infinite;
-    }
-    </style>
     """
 
 st.write("# Ouvres tes packs étoiles pour choisir ton cadeau !")

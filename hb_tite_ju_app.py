@@ -132,21 +132,17 @@ with col2:
     # CSS pour l'effet de texte brillant
     glowing_text_css = """
     <style>
-        body {
-            background-color: #f9d835; /* Couleur de fond similaire à l'image */
-            font-family: 'Arial', sans-serif; /* Style de police générique */
-        }
-        .legendary {
-            font-size: 60px; /* Taille de la police */
-            color: #ffd700; /* Couleur dorée */
-            text-align: center; /* Centrage du texte */
-            text-shadow: 
-                0 0 7px #fff, /* Première ombre blanche pour la brillance */
-                0 0 10px #ffd700, /* Seconde ombre jaune dorée */
-                0 0 20px #ffd700, /* Troisième ombre pour renforcer la lueur */
-                0 0 40px #ffd700, /* Quatrième ombre pour un effet plus intense */
-                0 0 80px #ffd700; /* Cinquième ombre pour une lueur maximale */
-        }
+    @keyframes glowing {
+        0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffd700, 0 0 20px #ffd700, 0 0 25px #ffd700, 0 0 30px #ffd700, 0 0 35px #ffd700; }
+        50% { text-shadow: 0 0 5px #fff, 0 0 10px #ffea00, 0 0 15px #ffea00, 0 0 20px #ffea00, 0 0 25px #ffea00, 0 0 30px #ffea00, 0 0 35px #ffea00; }
+        100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffd700, 0 0 20px #ffd700, 0 0 25px #ffd700, 0 0 30px #ffd700, 0 0 35px #ffd700; }
+    }
+    .glowing-text {
+        font-size: 2em;
+        color: #fff;
+        text-align: center;
+        animation: glowing 1500ms infinite;
+    }
     </style>
     """
 
@@ -154,7 +150,7 @@ with col2:
     st.markdown(glowing_text_css, unsafe_allow_html=True)
 
     # Utiliser HTML pour ajouter le texte brillant
-    st.markdown('<h0 class="legendary">Légendaire</h0>', unsafe_allow_html=True)
+    st.markdown('<h1 class="glowing-text">Légendaire</h1>', unsafe_allow_html=True)
     st.write("")
 
     # Affichage du dernier item

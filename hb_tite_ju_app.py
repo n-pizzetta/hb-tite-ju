@@ -13,8 +13,8 @@ items = [
         - sangles de compression latérales (pratique pour y accrocher des trucs)
         - filet sur le côté pour gourde
         """,
-        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSNLdcERYGODqa2qJ3WxcUj0YYoiaz6Dodr4YHlhgTjNbqEpoi7",
-        "image2": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQCpnbhAQp_vM0UDZOZ1vilxQdYSXEcMnco-M1VgCIPcEPuFHc",
+        "image": "https://product-cdn-frz.alltricks.com/large/114/295114/2295114/4294362",
+        "image2": "https://product-cdn-frz.alltricks.com/large/114/295114/2295114/4294371",
     },
     {
         "name": "The North Face Slackpack 2.0 W",

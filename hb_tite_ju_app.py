@@ -139,7 +139,7 @@ with col2:
     }
     .glowing-text {
         font-size: 2.2em;
-        color: #fff;
+        color: #000;
         font-weight: bold; /* Gras pour mieux voir le contour */
         text-shadow: 
             -1px -1px 0 #000,  

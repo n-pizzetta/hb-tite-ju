@@ -129,7 +129,28 @@ with col2:
                 st.session_state.detail_view = None
                 st.experimental_rerun()
     
-    st.write("## Dernier pack étoile")
+    # CSS pour l'effet de texte brillant
+    glowing_text_css = """
+    <style>
+    @keyframes glowing {
+        0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073; }
+        50% { text-shadow: 0 0 5px #fff, 0 0 10px #ff4da6, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6; }
+        100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073; }
+    }
+    .glowing-text {
+        font-size: 2em;
+        color: #fff;
+        text-align: center;
+        animation: glowing 1500ms infinite;
+    }
+    </style>
+    """
+
+    # Ajouter le CSS à la page
+    st.markdown(glowing_text_css, unsafe_allow_html=True)
+
+    # Utiliser HTML pour ajouter le texte brillant
+    st.markdown('<h1 class="glowing-text">Légendaire</h1>', unsafe_allow_html=True)
 
     # Affichage du dernier item
     i = len(items) - 1

@@ -188,7 +188,7 @@ with col2:
     st.markdown(glowing_text_css, unsafe_allow_html=True)
 
     # Utiliser HTML pour ajouter le texte brillant
-    st.markdown('<h1 class="glowing-text">Légendaire</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="glowing-text">   Légendaire</h1>', unsafe_allow_html=True)
     st.write("")
 
     # Affichage du dernier item

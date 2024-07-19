@@ -83,21 +83,25 @@ def show_details(index):
     st.write(f"### {item['name']}")
     st.write(item['description'])
 
-# Fonction pour rendre une image cliquable et pour gérer le survol
+# Fonction pour rendre une image cliquable
 def clickable_image(image_url, index, hover_image_url):
-    st.image(image_url, use_column_width=True, on_click=toggle_image, args=(index,))
     st.markdown(
-        f"""<style>
-            img[src$="{image_url}"]:hover {{
-                content: url({hover_image_url});
-            }}
-        </style>""", unsafe_allow_html=True)
-
-# Fonction pour basculer entre les images et les détails
-def toggle_image(index):
-    st.session_state.show_images[index] = not st.session_state.show_images[index]
-    st.experimental_rerun()
-
+        f"""
+        <style>
+        .clickable-img-{index} {{
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+        }}
+        .clickable-img-{index}:hover {{
+            transform: scale(1.1);
+            content: url({hover_image_url});
+        }}
+        </style>
+        <img src="{image_url}" class="clickable-img-{index}" id="clickable-img-{index}" onclick="document.getElementById('img-btn-{index}').click()" onmouseover="document.getElementById('clickable-img-{index}').src='{hover_image_url}';" onmouseout="document.getElementById('clickable-img-{index}').src='{image_url}';">
+        <input type="button" id="img-btn-{index}" style="display:none;">
+        """,
+        unsafe_allow_html=True,
+    )
 
 
 st.write("# Ouvre tes packs étoiles pour choisir ton cadeau !")
@@ -120,7 +124,10 @@ with col2:
         else:
             # Image de point d'interrogation cliquable
             clickable_image(placeholder_image, i, placeholder_image)
-            st.session_state.detail_view = None
+            if st.button("Ouvrir le pack", key=f"button_{i}", on_click=lambda i=i: st.session_state.update({f"show_images_{i}": True})):
+                st.session_state.show_images[i] = True
+                st.session_state.detail_view = None
+                st.experimental_rerun()
     
     # CSS pour l'effet de texte brillant
     glowing_text_css = """

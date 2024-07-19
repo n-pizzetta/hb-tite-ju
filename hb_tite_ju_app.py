@@ -139,7 +139,8 @@ with col2:
     }
     .glowing-text {
         font-size: 2em;
-        color: #fff;
+        color: #FAF9AC;
+        align-items: center;
         text-align: center;
         animation: glowing 1500ms infinite;
     }

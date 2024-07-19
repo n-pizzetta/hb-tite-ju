@@ -104,6 +104,49 @@ def clickable_image(image_url, index, hover_image_url):
     )
 
 
+# CSS pour l'effet de texte brillant
+glowing_text_css = """
+<style>
+@keyframes glowingGold {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffd700, 0 0 20px #ffd700, 0 0 25px #ffd700, 0 0 30px #ffd700, 0 0 35px #ffd700; }
+    50% { text-shadow: 0 0 5px #fff, 0 0 10px #ffea00, 0 0 15px #ffea00, 0 0 20px #ffea00, 0 0 25px #ffea00, 0 0 30px #ffea00, 0 0 35px #ffea00; }
+    100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffd700, 0 0 20px #ffd700, 0 0 25px #ffd700, 0 0 30px #ffd700, 0 0 35px #ffd700; }
+}
+.glowing-text-gold {
+    font-size: 2.2em;
+    color: #000;
+    font-weight: bold; /* Gras pour mieux voir le contour */
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000; /* Contour noir autour du texte */
+    align-items: center;
+    text-align: center;
+    animation: glowing 1500ms infinite;
+}
+
+@keyframes glowingViolet {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #8a2be2, 0 0 20px #8a2be2, 0 0 25px #8a2be2, 0 0 30px #8a2be2, 0 0 35px #8a2be2; }
+    50% { text-shadow: 0 0 5px #fff, 0 0 10px #da70d6, 0 0 15px #da70d6, 0 0 20px #da70d6, 0 0 25px #da70d6, 0 0 30px #da70d6, 0 0 35px #da70d6; }
+    100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #8a2be2, 0 0 20px #8a2be2, 0 0 25px #8a2be2, 0 0 30px #8a2be2, 0 0 35px #8a2be2; }
+}
+glowing-text-violet {
+    font-size: 2.2em;
+    color: #000;
+    font-weight: bold; /* Gras pour mieux voir le contour */
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000; /* Contour noir autour du texte */
+    align-items: center;
+    text-align: center;
+    animation: glowing2 1500ms infinite;
+}
+</style>
+"""
+
 st.write("# Ouvres tes packs étoiles pour choisir ton cadeau !")
 
 st.write("# ")
@@ -114,35 +157,12 @@ with col1:
     st.write(' ')
 
 with col2:
-    # CSS pour l'effet de texte brillant
-    glowing_text_css2 = """
-    <style>
-    @keyframes glowing2 {
-        0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #8a2be2, 0 0 20px #8a2be2, 0 0 25px #8a2be2, 0 0 30px #8a2be2, 0 0 35px #8a2be2; }
-        50% { text-shadow: 0 0 5px #fff, 0 0 10px #da70d6, 0 0 15px #da70d6, 0 0 20px #da70d6, 0 0 25px #da70d6, 0 0 30px #da70d6, 0 0 35px #da70d6; }
-        100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #8a2be2, 0 0 20px #8a2be2, 0 0 25px #8a2be2, 0 0 30px #8a2be2, 0 0 35px #8a2be2; }
-    }
-    glowing-text2 {
-        font-size: 2.2em;
-        color: #000;
-        font-weight: bold; /* Gras pour mieux voir le contour */
-        text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000; /* Contour noir autour du texte */
-        align-items: center;
-        text-align: center;
-        animation: glowing2 1500ms infinite;
-    }
-    </style>
-    """
-
-        # Ajouter le CSS à la page
-    st.markdown(glowing_text_css2, unsafe_allow_html=True)
+    
+    # Ajouter le CSS à la page
+    st.markdown(glowing_text_css, unsafe_allow_html=True)
 
     # Utiliser HTML pour ajouter le texte brillant
-    st.markdown('<h1 class="glowing-text2">Épic</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="glowing-text-violet">    Épic</h1>', unsafe_allow_html=True)
     st.write("")
 
     # Affichage des icônes
@@ -160,35 +180,13 @@ with col2:
                 st.session_state.detail_view = None
                 st.experimental_rerun()
     
-    # CSS pour l'effet de texte brillant
-    glowing_text_css = """
-    <style>
-    @keyframes glowing {
-        0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffd700, 0 0 20px #ffd700, 0 0 25px #ffd700, 0 0 30px #ffd700, 0 0 35px #ffd700; }
-        50% { text-shadow: 0 0 5px #fff, 0 0 10px #ffea00, 0 0 15px #ffea00, 0 0 20px #ffea00, 0 0 25px #ffea00, 0 0 30px #ffea00, 0 0 35px #ffea00; }
-        100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffd700, 0 0 20px #ffd700, 0 0 25px #ffd700, 0 0 30px #ffd700, 0 0 35px #ffd700; }
-    }
-    .glowing-text {
-        font-size: 2.2em;
-        color: #000;
-        font-weight: bold; /* Gras pour mieux voir le contour */
-        text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000; /* Contour noir autour du texte */
-        align-items: center;
-        text-align: center;
-        animation: glowing 1500ms infinite;
-    }
-    </style>
-    """
+    
 
     # Ajouter le CSS à la page
     st.markdown(glowing_text_css, unsafe_allow_html=True)
 
     # Utiliser HTML pour ajouter le texte brillant
-    st.markdown('<h1 class="glowing-text">   Légendaire</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="glowing-text-gold">    Légendaire</h1>', unsafe_allow_html=True)
     st.write("")
 
     # Affichage du dernier item

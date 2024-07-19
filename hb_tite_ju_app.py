@@ -13,8 +13,8 @@ items = [
         - sangles de compression latérales (pratique pour y accrocher des trucs)
         - filet sur le côté pour gourde
         """,
-        "image": "https://product-cdn-frz.alltricks.com/large/114/295114/2295114/4294362",
-        "image2": "https://product-cdn-frz.alltricks.com/large/114/295114/2295114/4294371",
+        "image": "https://www.bfgcdn.com/1500_1500_90/502-6697/millet-divino-25-sac-a-dos-journee.jpg",
+        "image2": "https://www.bfgcdn.com/1500_1500_90/502-6697/millet-divino-25-sac-a-dos-journee-detail-11.jpg",
     },
     {
         "name": "The North Face Slackpack 2.0 W",

@@ -138,8 +138,14 @@ with col2:
         100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffd700, 0 0 20px #ffd700, 0 0 25px #ffd700, 0 0 30px #ffd700, 0 0 35px #ffd700; }
     }
     .glowing-text {
-        font-size: 2em;
+        font-size: 2.2em;
         color: #FAF9AC;
+        font-weight: bold; /* Gras pour mieux voir le contour */
+        text-shadow: 
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000; /* Contour noir autour du texte */
         align-items: center;
         text-align: center;
         animation: glowing 1500ms infinite;

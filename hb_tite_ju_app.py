@@ -133,7 +133,7 @@ with col2:
             1px  1px 0 #000; /* Contour noir autour du texte */
         align-items: center;
         text-align: center;
-        animation: glowing 1500ms infinite;
+        animation: glowing2 1500ms infinite;
     }
     </style>
     """
